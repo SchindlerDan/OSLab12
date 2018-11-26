@@ -34,7 +34,7 @@ int main(int argc, char** argv){
     		printf( (statBuf.st_mode & S_IROTH) ? "r" : "-");
     		printf( (statBuf.st_mode & S_IWOTH) ? "w" : "-");
     		printf( (statBuf.st_mode & S_IXOTH) ? "x " : "- ");
-		printf("INode ID: %i", entryPtr->d_ino);
+		printf("INode ID: %i ", entryPtr->d_ino);
 		printf("Group ID: %i, User ID: %i, Last Edit: %s", statBuf.st_gid, statBuf.st_uid, ctime(&(statBuf.st_mtime)));
 		//printf("INode ID: %i\n", entryPtr->d_ino);
 	}
